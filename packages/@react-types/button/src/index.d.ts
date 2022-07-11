@@ -17,7 +17,9 @@ interface ButtonProps extends PressEvents, FocusableProps {
   /** Whether the button is disabled. */
   isDisabled?: boolean,
   /** The content to display in the button. */
-  children?: ReactNode
+  children?: ReactNode,
+  /** The ID of the corresponding form when submit button needs to be separate from form. */
+  form?: string
 }
 
 interface ToggleButtonProps extends ButtonProps {

@@ -37,6 +37,7 @@ function Button<T extends ElementType = 'button'>(props: SpectrumButtonProps<T>,
     isQuiet,
     isDisabled,
     autoFocus,
+    form,
     ...otherProps
   } = props;
   let domRef = useFocusableRef(ref);
@@ -55,6 +56,7 @@ function Button<T extends ElementType = 'button'>(props: SpectrumButtonProps<T>,
         {...styleProps}
         {...mergeProps(buttonProps, hoverProps)}
         ref={domRef}
+        form={form}
         className={
           classNames(
             styles,
