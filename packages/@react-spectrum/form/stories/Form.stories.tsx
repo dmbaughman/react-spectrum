@@ -190,6 +190,22 @@ storiesOf('Form', module)
     () => <FormWithSubmit />
   )
   .add(
+    'form with separate button',
+    () => (
+      <>
+        <Form id="form-separate-button" onSubmit={e => { e.preventDefault(); console.log('form submitted'); }}>
+          <TextField label="Email Address" />
+        </Form>
+        <Button
+          form="form-separate-button"
+          type="submit"
+          variant="cta">
+          Submit
+        </Button>
+      </>
+    )
+  )
+  .add(
     'form with numberfield and locale=ar-AE',
     () => (
       <Flex gap="size-100">
