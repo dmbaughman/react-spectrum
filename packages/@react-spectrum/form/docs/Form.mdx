@@ -77,6 +77,19 @@ technology as a form landmark region to which assistive technology can navigate.
 </Form>
 ```
 
+## Separate submit button
+
+Sometimes, it is necessary to have a submit button for a form placed outside the form itself.  In this case, use a matching `id` attribute on the form
+and `form` attribute on the submit button to link the button to the form.
+
+```tsx example
+<Form id="signin-form">
+  <Textfield label="Username" />
+  <Textfield label="Password" />
+</Form>
+
+<Button form="signin-form">Sign In</Button>
+```
 
 ## Props
 
